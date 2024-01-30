@@ -5,7 +5,7 @@ import img from "/public/hero.png";
 async function getData() {
   const url = process.env.NEXTAUTH_URL;
 
-  const res = await fetch(`${url}/api/posts`, {
+  const res = await fetch(`/api/posts`, {
     cache: "no-store",
   });
 

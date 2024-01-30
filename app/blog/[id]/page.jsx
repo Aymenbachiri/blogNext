@@ -6,7 +6,7 @@ import { FaPencilAlt } from "react-icons/fa";
 
 async function getData(id) {
   const url = process.env.NEXTAUTH_URL;
-  const res = await fetch(`${url}/api/posts/${id}`, {
+  const res = await fetch(`/api/posts/${id}`, {
     cache: "no-store",
   });
 
