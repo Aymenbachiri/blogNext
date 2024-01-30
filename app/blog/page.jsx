@@ -3,7 +3,9 @@ import Link from "next/link";
 import img from "/public/hero.png";
 
 async function getData() {
-  const res = await fetch("http://localhost:3000/api/posts", {
+  const url = process.env.NEXTAUTH_URL;
+
+  const res = await fetch(`${url}/api/posts`, {
     cache: "no-store",
   });
 

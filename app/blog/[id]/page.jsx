@@ -5,7 +5,8 @@ import { FaFeatherPointed } from "react-icons/fa6";
 import { FaPencilAlt } from "react-icons/fa";
 
 async function getData(id) {
-  const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
+  const url = process.env.NEXTAUTH_URL;
+  const res = await fetch(`${url}/api/posts/${id}`, {
     cache: "no-store",
   });
 
