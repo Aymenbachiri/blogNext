@@ -58,7 +58,14 @@ export default async function BlogPost({ params }) {
           </div>
         </div>
         <div className="flex-[1] h-[300px] relative">
-          <Image src={data.img} alt="" fill={true} className=" object-cover" />
+          <Image
+            src={data.img}
+            alt="img"
+            width={300}
+            height={100}
+            priority
+            className="w-auto object-cover"
+          />
         </div>
       </div>
       <div className="mt-8 font-normal text-xl text-[#999] text-justify">
